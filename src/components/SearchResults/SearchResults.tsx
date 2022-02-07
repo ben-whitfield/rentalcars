@@ -2,36 +2,36 @@ import React from 'react';
 import styles from './SearchResults.module.css';
 
 import SearchResult from '../SearchResult/SearchResult';
+import ErrorMessage from '../ErrorMessage/ErrorMessage'
 
-// interface SearchResultsProps {
-    
-// }
+interface resultsProp {
+  loading: boolean
+  error: any
+}
 
-// { }: SearchResultsProps
-const SearchResults = () => {
-
-  const data = [
-    {
-      id: 0,
-      placeType: 'A',
-      name: 'Manchester Air',
-    },
-    {
-      id: 1,
-      placeType: 'A',
-      name: 'Manchester Picc',
-    },
-    {
-      id: 2,
-      placeType: 'B',
-      name: 'Manchester Vic',
+interface results extends resultsProp {
+    results? :{
+      docs: {
+        bookingId: number
+        placeType: string
+        name: string
+      }[]
+      isGooglePowered: boolean
+      numFound: number
     }
-  ]
-    return (
-      <div className={styles['search-results']}>
-        {data.map(result => (<SearchResult key={`result-${result.id}`} result={result} />))}
-      </div>
-    )
+    length?: number
+
+}
+
+const SearchResults = ({results, loading, error}:results) => {
+  
+  const data = results?.docs || []
+  
+  return (
+    <div className={`${styles['search-results']}, ${loading? 'loading' : ''}`}>
+      {error ? <ErrorMessage message={error} /> : data.map(item => (<SearchResult key={item.bookingId ?? 'noneFound'} result={item} />))}
+    </div>
+  )
 };
 
 export default SearchResults;

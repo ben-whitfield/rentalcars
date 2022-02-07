@@ -3,7 +3,7 @@ import styles from './SearchResult.module.css';
 
 interface SearchResultsProps {
   result: {
-    id: number
+    bookingId: number
     placeType: string
     name: string
 
@@ -13,8 +13,8 @@ interface SearchResultsProps {
 const SearchResult = ({ result }: SearchResultsProps) => {
   return (
     <div className={styles['search-result']}>
-      {result.id}
-      {result.placeType} 
+      {result.bookingId}
+      {result.placeType ?? ''} 
       {result.name}
     </div>
   )
