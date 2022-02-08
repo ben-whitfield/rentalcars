@@ -1,3 +1,7 @@
 .search-results {
-  color:blue;
+  background-color: #fff;
+  width: 390px;
+  border-radius: 5px;
+  margin-left: 5px;
+  position: absolute;
 }

@@ -15,6 +15,10 @@ interface results extends resultsProp {
         bookingId: number
         placeType: string
         name: string
+        iata: string
+        city: string
+        region: string
+        country: string
       }[]
       isGooglePowered: boolean
       numFound: number
@@ -28,7 +32,7 @@ const SearchResults = ({results, loading, error}:results) => {
   const data = results?.docs || []
   
   return (
-    <div className={`${styles['search-results']}, ${loading? 'loading' : ''}`}>
+    <div className={`${styles['search-results']} ${loading? 'loading' : ''}`}>
       {error ? <ErrorMessage message={error} /> : data.map(item => (<SearchResult key={item.bookingId ?? 'noneFound'} result={item} />))}
     </div>
   )

@@ -13,10 +13,12 @@ interface FormInputProps {
 }
 
 const FormInput = ({ id, type, text, inputChange, value }: FormInputProps) => {
-    return ( 
-      <label htmlFor={id}>{text}
-        <input id={id} name='searchTerm' value={value} className={styles.input} type={type} onChange={inputChange}/>
-      </label>
+    return (
+      <div className={styles['search-input-wrapper']}>
+        <label className={styles['search-label']} htmlFor={id}>{text}</label>
+        <span className={styles['search-icon']}></span>
+        <input className={styles['search-input']} id={id} name='searchTerm' value={value} type={type} onChange={inputChange}/>
+      </div>
     )
 };
 

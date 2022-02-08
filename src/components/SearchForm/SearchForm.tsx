@@ -15,10 +15,12 @@ interface SearchFormProps {
 
 const SearchForm = ({ params, onParamChange }: SearchFormProps) => {
   return ( 
-    <form className={styles.form} >
-      <FormInput id='searchform' type='text' text='Search: ' inputChange={onParamChange} value={params.searchTerm} />
-      <Button type="submit" text="Search" />
-    </form>
+    <div className={styles['search-wrapper']}>
+      <form className={styles.form} >
+        <FormInput id='searchform' type='text' text='Search: ' inputChange={onParamChange} value={params.searchTerm} />
+        <Button type="submit" text="Search" />
+      </form>
+    </div>
   )
 };
 

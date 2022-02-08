@@ -1,0 +1,30 @@
+.app {
+  text-align: center;
+  color: #fff;
+}
+
+.hero-container {
+  min-height: 290px;
+  background-image: url('https://cdn2.rcstatic.com/com.rentalcars.185492029745.eu-west-1.web.prod.static-live/images/landing-pages/home/background-large.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100%;
+  height: min(calc(-260px + 100vh),596px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: calc(4px*4) !important;
+}
+
+.page-title {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 700;
+  text-align: left;
+  margin:0;
+  padding:0;
+}
+
+.hero-content {
+  margin: auto;
+}

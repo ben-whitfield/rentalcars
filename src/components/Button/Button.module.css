@@ -1,18 +1,19 @@
 .button {
+  position: absolute;
+  right: 0;
   width: auto;
   font: inherit;
   padding: 0.5rem 1.5rem;
-  border: 1px solid #8b005d;
+  border: 1px solid #068323;
   color: white;
-  background: #8b005d;
+  background: #068323;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
   cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .button {
-    width: 100%;
-  }
+  display: inline-block;
+  font-weight: 700;
+  height: 64px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .button:focus {
@@ -21,7 +22,7 @@
 
 .button:hover,
 .button:active {
-  background: #ac0e77;
-  border-color: #ac0e77;
+  background: #0d6521;
+  border-color: #0d6521;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
 }

@@ -1,0 +1,21 @@
+.list-container {
+  display: inline-block;
+
+}
+
+.list-item {
+  display: inline-block;
+}
+
+.list-icon-check {
+  display: inline-block;
+  background-image: url('../../../public/assets/check.svg');
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  background-size: 100%;
+}
+
+.list-text {
+  display: inline-block;
+}

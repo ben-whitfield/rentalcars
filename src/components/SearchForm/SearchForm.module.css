@@ -1,0 +1,9 @@
+.search-wrapper {
+  width: 500px;
+  background-color: #ffb700;
+  border-radius: 10px;
+  text-align: left;
+  border: 4px solid #ffb700;
+  position: relative;
+  margin-top: 20px;
+}
