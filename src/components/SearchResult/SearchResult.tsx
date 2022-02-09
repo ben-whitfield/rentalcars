@@ -14,7 +14,6 @@ interface SearchResultsProps {
 }
 
 const placeType = (val: string) => {
-  console.log(val)
   if(val === 'A') { return 'Airport' }
   else if (val === 'T') { return 'Station' }
   else return 'Station'
@@ -22,7 +21,7 @@ const placeType = (val: string) => {
 
 const SearchResult = ({ result }: SearchResultsProps) => {
   return ( 
-    <div className={styles['search-result']}>
+    <div className={styles['search-result']} data-resultitem>
       <div className={`${styles['result-label']} ${result.placeType === 'a' ? 'a' : 'c'}`}>
         <span>{placeType(result.placeType)}</span>
       </div>

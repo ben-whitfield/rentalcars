@@ -17,7 +17,7 @@ const FormInput = ({ id, type, text, inputChange, value }: FormInputProps) => {
       <div className={styles['search-input-wrapper']}>
         <label className={styles['search-label']} htmlFor={id}>{text}</label>
         <span className={styles['search-icon']}></span>
-        <input className={styles['search-input']} id={id} name='searchTerm' value={value} type={type} onChange={inputChange}/>
+        <input className={styles['search-input']} id={id} name='searchTerm' value={value} type={type} onChange={inputChange} placeholder='Pick-up location' data-testid='formInput'/>
       </div>
     )
 };

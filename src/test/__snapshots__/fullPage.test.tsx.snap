@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot snapshot render full page 1`] = `
+<div
+  className="app"
+>
+  <section
+    className="hero-container"
+  >
+    <div
+      className="hero-content"
+    >
+      <h1
+        className="page-title"
+        role="heading"
+      >
+        Car Hire – Search, Compare & Save
+      </h1>
+      <div
+        className="list-container"
+      >
+        <div
+          className="list-item"
+        >
+          <div
+            className="list-icon-check"
+          />
+          <div
+            className="list-text"
+          >
+            Free cancellations on most bookings
+          </div>
+        </div>
+      </div>
+      <div
+        className="list-container"
+      >
+        <div
+          className="list-item"
+        >
+          <div
+            className="list-icon-check"
+          />
+          <div
+            className="list-text"
+          >
+            60,000+ locations
+          </div>
+        </div>
+      </div>
+      <div
+        className="list-container"
+      >
+        <div
+          className="list-item"
+        >
+          <div
+            className="list-icon-check"
+          />
+          <div
+            className="list-text"
+          >
+            Customer support in 40+ languages
+          </div>
+        </div>
+      </div>
+      <div
+        className="search-wrapper"
+      >
+        <form
+          className="form"
+        >
+          <div
+            className="search-input-wrapper"
+          >
+            <label
+              className="search-label"
+              htmlFor="searchform"
+            >
+              Search: 
+            </label>
+            <span
+              className="search-icon"
+            />
+            <input
+              className="search-input"
+              data-testid="formInput"
+              id="searchform"
+              name="searchTerm"
+              onChange={[Function]}
+              placeholder="Pick-up location"
+              type="text"
+              value=""
+            />
+          </div>
+          <button
+            className="button"
+            data-testid="searchButton"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+      <div
+        className="search-results loading"
+        data-testid="searchResultPanel"
+      />
+    </div>
+  </section>
+  <section
+    className="links"
+  >
+    <h3>
+      Page links
+    </h3>
+  </section>
+</div>
+`;

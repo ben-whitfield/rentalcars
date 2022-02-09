@@ -32,7 +32,7 @@ const SearchResults = ({results, loading, error}:results) => {
   const data = results?.docs || []
   
   return (
-    <div className={`${styles['search-results']} ${loading? 'loading' : ''}`}>
+    <div className={`${styles['search-results']} ${loading? 'loading' : ''}`} data-testid='searchResultPanel'>
       {error ? <ErrorMessage message={error} /> : data.map(item => (<SearchResult key={item.bookingId ?? 'noneFound'} result={item} />))}
     </div>
   )

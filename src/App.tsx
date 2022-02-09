@@ -25,7 +25,7 @@ function App() {
 
         <section className={style['hero-container']}>
           <div className={style['hero-content']}>
-            <h1 className={style['page-title']}>Car Hire – Search, Compare & Save</h1>
+            <h1 role='heading' className={style['page-title']}>Car Hire – Search, Compare & Save</h1>
             <ListItem text={'Free cancellations on most bookings'} icon={'check'} />
             <ListItem text={'60,000+ locations'} icon={'check'} />
             <ListItem text={'Customer support in 40+ languages'} icon={'check'} />
