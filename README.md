@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# RentalCars
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hey :wave:
 
-## Available Scripts
+Thanks for taking the time to look at this.
 
-In the project directory, you can run:
+## Built with
+* React
+* Typescript
 
-### `npm start`
+## Points to note
+* Included Typescript and Eslint to enforce type checking and general standards of code practice.
+* I didn't try to remake the entire page, I just focused on the top part of the UI.
+* The UI is not optimised for mobile devices. I have tested this on the device I have available and it is functional but would either:
+--* need additional media queries
+or 
+--* be designed responsively from the beginning
+* I included a selection of tests, this is not a comprehensive list and many more would need to be written to cover all aspects
+* Tests are using live data (no stub data or mocked endpoints) due to time constraints. I would not do this in a production project.
+* With more time I would have included unit tests to check specific functionality such as the retrieve
+* With more time I would have included screenshot and behaviour tests (via puppeteer or something similar)
+* Normally I prefer to use SASS for the components to aid maintainability but it seemed unnecessary for this project
+* I decided to go with modular CSS to keep components atomic
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Building and Running the app
+Should be as simple as cloning the Git repo and running `npm ci`.
+This would be followed with `npm run start`
+This should give you a locally accessible versio of the app.
 
-### `npm test`
+## Running the test
+`npm run test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Live Demo
+https://inspiring-poitras-77b63a.netlify.app/
