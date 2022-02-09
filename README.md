@@ -12,9 +12,9 @@ Thanks for taking the time to look at this.
 * Included Typescript and Eslint to enforce type checking and general standards of code practice.
 * I didn't try to remake the entire page, I just focused on the top part of the UI.
 * The UI is not optimised for mobile devices. I have tested this on the device I have available and it is functional but would either:
---* need additional media queries
+** need additional media queries
 or 
---* be designed responsively from the beginning
+** be designed responsively from the beginning
 * I included a selection of tests, this is not a comprehensive list and many more would need to be written to cover all aspects
 * Tests are using live data (no stub data or mocked endpoints) due to time constraints. I would not do this in a production project.
 * With more time I would have included unit tests to check specific functionality such as the retrieve
