@@ -9,7 +9,7 @@ interface ButtonProps {
 }
 
 const Button = ({ type, text }: ButtonProps) => {
-    return <button className={styles.button} type={type}>{text}</button>;
+    return <button data-testid='searchButton' className={styles.button} type={type}>{text}</button>;
 };
 
 export default Button;
