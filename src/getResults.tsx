@@ -31,27 +31,33 @@ const useFetchResults = (searchTerm: string) => {
   useEffect(() => {
     const controller = new AbortController();
     
-    
-    // return state
-    
-    dispatch({ type: ACTIONS.MAKE_REQUEST })
-    if(searchTerm.length < 2) {
-      dispatch({ type: ACTIONS.CLEAR_RESULTS})
-    } else {
-      axios.get(BASE_URL, {
-        signal: controller.signal,
-        params: { markdown: true, searchTerm }
-      }).then(res => {
-        dispatch({ type: ACTIONS.GET_DATA, payload: {results: res.data} })
-      }).catch( e => {
-        if (axios.isCancel(e)) return 
-        dispatch({ type: ACTIONS.ERROR, payload: {error: e} })
-      })
+    const timer = setTimeout(() => {
+      dispatch({ type: ACTIONS.MAKE_REQUEST })
+      if(searchTerm.length < 2) {
+        dispatch({ type: ACTIONS.CLEAR_RESULTS})
+      } else {
+        axios.get(BASE_URL, {
+          signal: controller.signal,
+          params: { markdown: true, searchTerm }
+        }).then(res => {
+          dispatch({ type: ACTIONS.GET_DATA, payload: {results: res.data} })
+        }).catch( e => {
+          if (axios.isCancel(e)) return 
+          dispatch({ type: ACTIONS.ERROR, payload: {error: e} })
+        })
       }
 
     return () => {
       controller.abort()
     }
+    }, 500)
+
+    return () => { // clean up useEffect
+      clearTimeout(timer)
+    }
+    // return state
+    
+    
   }, [searchTerm])
 
   return state
